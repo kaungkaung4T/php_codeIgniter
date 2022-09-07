@@ -17,6 +17,10 @@
 </head>
 
 <body style="width:600px;margin:auto;padding:220px 0 0 0;">
+
+	<a href="">ABOUT</a>
+
+
 	<h1><?php echo $title; ?></h1>
 
 	<p><?php echo $message; ?></p>
@@ -34,9 +38,27 @@
 			<div class="col">
 				<br />
 				<input class="btn btn-secondary" type="submit" value="Submit" />
+
+
+
+				<!-- <br><br><br><br>
+				<form action="" method="POST">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name">
+					<input type="submit">
+
+				</form> -->
+
+
+
 			</div>
 		</div>
 	</form>
+
+	<!-- <?php
+			$name =	$_POST["name"];
+			echo $name;
+			?> -->
 
 	<div class="container" id="qr_code">
 
@@ -45,6 +67,29 @@
 	<div id="t_status">
 		<h3 class='text-success text-center' id='t_success'></h3>
 	</div>
+
+
+	<!-- <input type="hidden" name="command" /> -->
+	<!-- <a href="javascript: document.register.command.value='Add'; document.register.submit();">
+					Submit
+				</a> -->
+
+
+	<!-- <script type="text/javascript">
+		function submitFormWithValue(val) {
+			document.getElementById('command').value = val;
+			document.forms["test"].submit();
+		}
+	</script>
+
+	<form id="test" name="test" action="#" method="post">
+		<input type="hidden" name="command" value="" />
+	</form>
+
+	<a href="javascript:submitFormWithValue('foo')">Submit</a> -->
+
+
+
 
 	<script>
 		$("#form_submit").submit(function(e) {
