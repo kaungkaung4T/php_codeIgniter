@@ -24,16 +24,16 @@
 	<h1><?php echo $title; ?></h1>
 
 	<p><?php echo $message; ?></p>
-
+	
 	<form id="form_submit">
 		<div class="row container-fluid">
 			<div class="col form-group">
 				<label for="merch_order_id">Merch Order ID</label>
-				<input type="text" class="form-control" id="merch_order_id" name="merch_order_id" placeholder="Merch Order ID">
+				<input type="text" class="form-control" value="<?php echo $this->session->flashdata('id'); ?>" id="merch_order_id" name="merch_order_id" placeholder="Merch Order ID">
 			</div>
 			<div class="col form-group">
 				<label for="total_amt">Total Amount</label>
-				<input type="text" class="form-control" id="total_amt" name="total_amt" placeholder="Total Amount">
+				<input type="text" class="form-control" value="<?php echo $this->session->flashdata('amount'); ?>" id="total_amt" name="total_amt" placeholder="Total Amount">
 			</div>
 			<div class="col">
 				<br />

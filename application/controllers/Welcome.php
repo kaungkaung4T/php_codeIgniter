@@ -47,13 +47,38 @@ class Welcome extends CI_Controller
 
 	public function test()
 	{
+		$this->load->helper("form");
+		$this->load->library('session');
+
+		$a = $this->input->post('money');
+
+		$amount = $this->input->post('amount');
+		$id = $this->input->post('id');
+
+		if ($a == "kpay") {
+			$this->session->set_flashdata('amount', $amount);
+			$this->session->set_flashdata('id', $id);
+			redirect('work', 'refresh');
+			
+		}
+		else if ($a == "bank") {
+			redirect('success', "refresh");
+		}
+
+
 
 		$this->load->view("test");
 	}
 
 
+	public function success() {
+		$this->load->view("success");
+	}
+
+
+
 	public function work()
-	{
+	{	$this->load->library('session');
 		$data = [
 			'title' => 'Example Kpay QR Code',
 			'message' => '',
