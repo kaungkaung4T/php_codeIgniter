@@ -7,16 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 
-	<link rel="stylesheet" href="<?php echo base_url("static/css/style.css"); ?>" type=" text/css" />
+	<link rel="stylesheet" href="<?php echo base_url()?>application/static/css/style.css" type=" text/css" />
 
 </head>
 
 <body>
 
-	<h1>wehfihwefi</h1>
 
 
-	<form action="" style="width:600px;margin:auto;padding:220px 0 0 0;">
+
+	<form action="" method="POST" style="width:400px;margin:auto;padding:110px 0 0 0;">
 
 		<div style="width:280px;margin-right:20px;">
 			<i class="bi bi-bank" style="font-size:50px;"></i><br>
@@ -30,11 +30,21 @@
 			<input type="radio" id="kpay" value="kpay" name="money">
 			<label for="kpay">KBZ Pay</label>
 		</div>
+		<br><br>
 		<input type="submit">
 
 	</form>
 
+<?php
+	if (isset($_POST["money"])) {
+		if ($_POST["money"] == "kpay") {
+			
+			header("Location: work");
+			exit();
+		}
+	}
 
+?>
 
 </body>
 

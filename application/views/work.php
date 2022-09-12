@@ -18,7 +18,7 @@
 
 <body style="width:600px;margin:auto;padding:220px 0 0 0;">
 
-	<a href="">ABOUT</a>
+	<a href="<?php echo base_url()?>test">ABOUT</a>
 
 
 	<h1><?php echo $title; ?></h1>
