@@ -56,3 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route["work"] = "welcome/work";
 $route["createOrder"] = "welcome/createOrder";
 $route["queryOrder"] =  "welcome/queryOrder";
+
+
+
+$route["test"] = "welcome/test";

@@ -45,6 +45,13 @@ class Welcome extends CI_Controller
 		$this->load->view('welcome_message');
 	}
 
+	public function test()
+	{
+
+		$this->load->view("test");
+	}
+
+
 	public function work()
 	{
 		$data = [
