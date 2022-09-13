@@ -59,9 +59,7 @@ class Welcome extends CI_Controller
 			$this->session->set_flashdata('amount', $amount);
 			$this->session->set_flashdata('id', $id);
 			redirect('work', 'refresh');
-			
-		}
-		else if ($a == "bank") {
+		} else if ($a == "bank") {
 			redirect('success', "refresh");
 		}
 
@@ -71,14 +69,16 @@ class Welcome extends CI_Controller
 	}
 
 
-	public function success() {
+	public function success()
+	{
 		$this->load->view("success");
 	}
 
 
 
 	public function work()
-	{	$this->load->library('session');
+	{
+		$this->load->library('session');
 		$data = [
 			'title' => 'Example Kpay QR Code',
 			'message' => '',
