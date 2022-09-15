@@ -13,41 +13,39 @@
 
 </head>
 
-<body>
 
 
 
+<form action="" method="POST" style="width:400px;margin:auto;padding:110px 0 0 0;">
 
-	<form action="" method="POST" style="width:400px;margin:auto;padding:110px 0 0 0;">
-
-		<div style="width:280px;margin-right:20px;">
-			<i class="bi bi-bank" style="font-size:50px;"></i><br>
-			<input type="radio" id="bank" value="bank" name="money" checked="checked">
-			<label for="bank">Deposit without bankbook</label>
-		</div>
+	<div style="width:280px;margin-right:20px;">
+		<i class="bi bi-bank" style="font-size:50px;"></i><br>
+		<input type="radio" id="bank" value="bank" name="money" checked="checked">
+		<label for="bank">Deposit without bankbook</label>
+	</div>
 
 
-		<div style="width:100px;">
-			<i class="bi bi-piggy-bank" style="font-size:50px;"></i><br>
-			<input type="radio" id="kpay" value="kpay" name="money">
-			<label for="kpay">KBZ Pay</label>
-		</div>
+	<div style="width:100px;">
+		<i class="bi bi-piggy-bank" style="font-size:50px;"></i><br>
+		<input type="radio" id="kpay" value="kpay" name="money">
+		<label for="kpay">KBZ Pay</label>
+	</div>
 
-		<div>
-			<br><br>
-			<label for="name">Name</label>
-			<input type="text" name="name" id="name" class="form-control"><br><br>
-			<label for="amount">Amount</label>
-			<input type="text" name="amount" id="amount" class="form-control"><br><br>
-			<label for="id">ID</label>
-			<input type="text" name="id" id="id" class="form-control">
-
-		</div>
-
+	<div>
 		<br><br>
-		<input type="submit">
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name" class="form-control"><br><br>
+		<label for="amount">Amount</label>
+		<input type="text" name="amount" id="amount" class="form-control"><br><br>
+		<label for="id">ID</label>
+		<input type="text" name="id" id="id" class="form-control">
 
-	</form>
+	</div>
+
+	<br><br>
+	<input type="submit">
+
+</form>
 
 
 
