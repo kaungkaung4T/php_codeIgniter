@@ -49,6 +49,7 @@ class Welcome extends CI_Controller
 	{
 		$this->load->helper("form");
 		$this->load->library('session');
+		$this->load->helper('url');
 
 		$a = $this->input->post('money');
 

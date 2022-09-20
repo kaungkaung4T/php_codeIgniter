@@ -12,9 +12,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
 </head>
-
-
-
+<img src="<?PHP echo base_url(); ?>images/kbzpay.jpg" alt="">
+<!-- 
+<img src="(../../images/kbzpay.jpg)" alt=""> -->
 
 <form action="" method="POST" style="width:400px;margin:auto;padding:110px 0 0 0;">
 
