@@ -10,9 +10,26 @@
 
 <body>
 
+	<h1><?php echo $header ?></h1>
+	<h4><?php echo $text ?></h4>
 
-	hello
+
+	<h5><?php echo $age ?></h5>
 
 </body>
 
 </html>
+
+
+
+<?php
+
+function fun($x)
+{
+	return $x;
+}
+
+$f = fun(103242340);
+echo $f;
+
+?>

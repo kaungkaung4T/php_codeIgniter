@@ -221,6 +221,11 @@ class Welcome extends CI_Controller
 
 	public function blog()
 	{
-		$this->load->view("blog");
+		$data = [
+			"header" => "weoifjweoif",
+			"text" => "ssssssss",
+			"age" => 22
+		];
+		$this->load->view("blog", $data);
 	}
 }
