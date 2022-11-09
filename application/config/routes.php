@@ -61,3 +61,6 @@ $route["queryOrder"] =  "welcome/queryOrder";
 
 $route["test"] = "welcome/test";
 $route["success"] = "welcome/success";
+
+
+$route["blog"] = "welcome/blog";

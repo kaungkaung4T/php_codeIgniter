@@ -218,4 +218,9 @@ class Welcome extends CI_Controller
 
 		echo $response;
 	}
+
+	public function blog()
+	{
+		$this->load->view("blog");
+	}
 }
