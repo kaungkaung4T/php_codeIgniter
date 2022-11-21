@@ -13,6 +13,7 @@ class Welcome extends CI_Controller
 	private $trade_type = "PAY_BY_QRCODE";
 	private $trans_currency = "MMK";
 	private $api_key = "Ssmall@12345";
+	private $time_out = "1m";
 
 	/// Method    
 	private $create_order_method = "kbz.payment.precreate";
@@ -126,12 +127,15 @@ class Welcome extends CI_Controller
 					"appid" => $this->app_id,
 					"trade_type" => $this->trade_type,
 					"total_amount" => $total_amount,
-					"trans_currency" => $this->trans_currency
+					"trans_currency" => $this->trans_currency,
+					"timeout_express" => $this->time_out
 				)
 			)
 		);
 
-		$stringA = "appid=" . $this->app_id . "&merch_code=" . $this->merch_code . "&merch_order_id=" . $merch_order_id . "&method=" . $this->create_order_method . "&nonce_str=" . $nonce_string . "&notify_url=" . $this->notify_url . "&timestamp=" . $format_utc_in_second . "&total_amount=" . $total_amount . "&trade_type=" . $this->trade_type . "&trans_currency=" . $this->trans_currency . "&version=" . $this->create_order_version . "";
+		$stringA = "appid=" . $this->app_id . "&merch_code=" . $this->merch_code . "&merch_order_id=" . $merch_order_id . "&method=" . $this->create_order_method . "&nonce_str=" . $nonce_string . "&notify_url=" . $this->notify_url . "&timeout_express=" . $this->time_out . "&timestamp=" . $format_utc_in_second . "&total_amount=" . $total_amount . "&trade_type=" . $this->trade_type . "&trans_currency=" . $this->trans_currency . "&version=" . $this->create_order_version . "";
+
+		// $stringA = "appid=" . $this->app_id . "&merch_code=" . $this->merch_code . "&merch_order_id=" . $merch_order_id . "&method=" . $this->create_order_method . "&nonce_str=" . $nonce_string . "&notify_url=" . $this->notify_url . "&timestamp=" . $format_utc_in_second . "&total_amount=" . $total_amount . "&trade_type=" . $this->trade_type . "&trans_currency=" . $this->trans_currency . "&timeout_express=" . $this->time_out . "&version=" . $this->create_order_version . "";
 
 		$stringToSign = $stringA . "&key=" . $this->api_key;
 

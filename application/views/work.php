@@ -104,9 +104,10 @@
 					total_amt: total_amt
 				},
 				success: function(data) {
+					
 					//parse json
 					var response_json = JSON.parse(data);
-					// console.log(response_json);
+					console.log(response_json);
 
 					$('#qr_code').qrcode({
 						text: response_json.Response.qrCode,
@@ -126,10 +127,15 @@
 							success: function(queryOrder) {
 								var queryOrder_json = JSON.parse(queryOrder);
 								// console.log(queryOrder_json);
+								console.log(queryOrder_json.Response.trade_status);
 
 								if (queryOrder_json.Response.trade_status == "WAIT_PAY") {
 									$("#t_status").html("<h3 class='bg-danger text-white text-center' id='t_success'>Waiting for payment</h3>");
-								} else {
+								} 
+								else if (queryOrder_json.Response.trade_status == "ORDER_EXPIRED") {
+									$("#t_status").html("<h3 class='bg-danger text-white text-center' id='t_success'>Order Expire</h3>");
+								}
+								else {
 									$("#t_status").html("<h3 class='bg-success text-white text-center' id='t_success'>Payment Successful</h3>");
 								}
 							}
