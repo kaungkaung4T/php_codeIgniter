@@ -5,17 +5,19 @@ require APPPATH . 'libraries/RestController.php';
 
 use chriskacerguis\RestServer\RestController;
 
-class api extends RestController
+class Api extends RestController
 {
 
 	public function __construct()
 	{
 		parent::__construct();
+		// $this->load->database();
 	}
 
 	public function index_get()
 	{
-
-		$this->response("hello", RestController::HTTP_OK);
+		$data = array();
+		$data["hello"] = "hello";
+		$this->response($data, RestController::HTTP_OK);
 	}
 }

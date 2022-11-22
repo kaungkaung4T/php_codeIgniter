@@ -10,7 +10,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | Set to force the use of HTTPS for REST API calls
 |
 */
-$config['force_https'] = true;
+$config['force_https'] = false;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,14 +44,14 @@ $config['rest_default_format'] = 'json';
 |
 */
 $config['rest_supported_formats'] = [
-	'json',
-	'array',
-	'csv',
-	'html',
-	'jsonp',
-	'php',
-	'serialized',
-	'xml',
+    'json',
+    'array',
+    'csv',
+    'html',
+    'jsonp',
+    'php',
+    'serialized',
+    'xml',
 ];
 
 /*
@@ -126,8 +126,7 @@ $config['rest_auth'] = false;
 | Note: If 'rest_auth' is set to 'session' then change 'auth_source' to the name of the session variable
 |
 */
-$config['auth_source'] = 'ldap';
-
+$config['auth_source'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -534,8 +533,7 @@ $config['rest_ajax_only'] = false;
 | Language file to load from the language directory
 |
 */
-
-$config['rest_language'] = 'korean';
+$config['rest_language'] = 'english';
 
 /*
 |--------------------------------------------------------------------------
@@ -558,11 +556,11 @@ $config['check_cors'] = false;
 |
 */
 $config['allowed_cors_headers'] = [
-	'Origin',
-	'X-Requested-With',
-	'Content-Type',
-	'Accept',
-	'Access-Control-Request-Method',
+    'Origin',
+    'X-Requested-With',
+    'Content-Type',
+    'Accept',
+    'Access-Control-Request-Method',
 ];
 
 /*
@@ -574,12 +572,12 @@ $config['allowed_cors_headers'] = [
 |
 */
 $config['allowed_cors_methods'] = [
-	'GET',
-	'POST',
-	'OPTIONS',
-	'PUT',
-	'PATCH',
-	'DELETE',
+    'GET',
+    'POST',
+    'OPTIONS',
+    'PUT',
+    'PATCH',
+    'DELETE',
 ];
 
 /*
