@@ -1,9 +1,11 @@
 <?php
+
 if (!defined('BASEPATH')) exit('No direct script access allowed');
-require APPPATH . 'libraries/rest_controller.php';
+require APPPATH . 'libraries/RestController.php';
 
+use chriskacerguis\RestServer\RestController;
 
-class api extends rest_controller
+class api extends RestController
 {
 
 	public function __construct()
@@ -14,6 +16,6 @@ class api extends rest_controller
 	public function index_get()
 	{
 
-		$this->response("hello", 200);
+		$this->response("hello", RestController::HTTP_OK);
 	}
 }
