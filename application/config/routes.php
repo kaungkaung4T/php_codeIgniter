@@ -64,3 +64,4 @@ $route["success"] = "welcome/success";
 
 
 $route["blog"] = "welcome/blog";
+$route["api"] = "api/index";
